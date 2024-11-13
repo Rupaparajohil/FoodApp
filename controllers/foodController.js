@@ -146,16 +146,7 @@ const updateFoodController = async (req,res) =>{
                 message:'no food found'
             })
         }
-        const {title,
-            description,
-            price,
-            imageUrl,
-            foodtags,
-            category,
-            code,
-            isAvailabe,
-            resturnat,
-            rating}= req.body
+        const {title,description, price,imageUrl,foodtags,category, code, isAvailabe, resturnat,rating}= req.body
         const updatedFood = await foodModel.findByIdAndUpdate(foodId,{title,
             description,
             price,
